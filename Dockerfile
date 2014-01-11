@@ -7,10 +7,11 @@
 # Pull base image.
 FROM ubuntu:12.10
 
-# Install Updates.
+# Update OS.
 RUN echo "deb http://archive.ubuntu.com/ubuntu quantal main universe multiverse" > /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get upgrade -y
 
-# Install packages.
+# Install basic packages.
+RUN apt-get install -y software-properties-common
 RUN apt-get install -y curl git-core htop wget
