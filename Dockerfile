@@ -21,4 +21,5 @@ ADD root/.bashrc /root/.bashrc
 ADD root/scripts /root/scripts
 
 # Set working directory.
+ENV HOME /root
 WORKDIR /root
