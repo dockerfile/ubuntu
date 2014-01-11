@@ -21,5 +21,6 @@ alias tarcz='tar czvf'
 alias tarx='tar xvf'
 alias tarxz='tar xvzf'
 
+alias g='git'
 alias less='less -R'
 alias os='lsb_release -a'
