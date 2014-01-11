@@ -14,3 +14,8 @@ RUN apt-get upgrade -y
 
 # Install basic packages.
 RUN apt-get install -y curl git-core htop wget
+
+# Add files.
+ADD root/.bash_profile /root/.bash_profile
+ADD root/.bashrc /root/.bashrc
+ADD root/scripts /root/scripts
