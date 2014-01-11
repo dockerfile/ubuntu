@@ -16,8 +16,8 @@ RUN apt-get upgrade -y
 RUN apt-get install -y curl git-core htop wget
 
 # Add files.
-ADD root/.bash_profile /root/.bash_profile
 ADD root/.bashrc /root/.bashrc
+ADD root/.profile /root/.profile
 ADD root/scripts /root/scripts
 
 # Set working directory.
