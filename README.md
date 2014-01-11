@@ -15,4 +15,4 @@ This repository contains **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) for 
 
 ### Usage
 
-    docker run dockerfile/ubuntu
+    docker run -i -t dockerfile/ubuntu bash
