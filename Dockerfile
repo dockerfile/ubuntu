@@ -19,6 +19,7 @@ RUN apt-get install -y curl git-core htop wget
 ADD root/.bash_profile /root/.bash_profile
 ADD root/.bashrc /root/.bashrc
 ADD root/scripts /root/scripts
+ADD rm /root/.profile
 
 # Set working directory.
 WORKDIR /root
