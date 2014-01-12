@@ -24,6 +24,7 @@ alias tarxz='tar xvzf'
 alias g='git'
 alias less='less -R'
 alias os='lsb_release -a'
+alias vi='vim'
 
 # Colorize directory listing
 alias ls="ls -ph --color=auto"

@@ -13,10 +13,11 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # Install basic packages.
-RUN apt-get install -y curl git htop wget
+RUN apt-get install -y curl git htop vim wget
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
+ADD root/.gitconfig /root/.gitconfig
 ADD root/scripts /root/scripts
 
 # Set working directory.
