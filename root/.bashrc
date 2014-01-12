@@ -21,8 +21,6 @@ alias tarcz='tar czvf'
 alias tarx='tar xvf'
 alias tarxz='tar xvzf'
 
-alias d='docker'
-alias dkill='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 alias g='git'
 alias less='less -R'
 alias os='lsb_release -a'
