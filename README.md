@@ -10,7 +10,7 @@ This repository contains **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) for 
 
 2. Download [trusted build](https://index.docker.io/u/dockerfile/ubuntu/) from public [Docker Registry](https://index.docker.io/): `docker pull dockerfile/ubuntu`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/ubuntu" .`)
+   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/ubuntu" github.com/dockerfile/ubuntu`)
 
 
 ### Usage

@@ -13,11 +13,10 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # Install basic packages.
-RUN apt-get install -y curl git-core htop wget
+RUN apt-get install -y curl git htop wget
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
-ADD root/.profile /root/.profile
 ADD root/scripts /root/scripts
 
 # Set working directory.
