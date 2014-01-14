@@ -13,6 +13,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # Install basic packages.
+RUN apt-get install -y software-properties-common
 RUN apt-get install -y curl git htop unzip vim wget
 
 # Add files.
