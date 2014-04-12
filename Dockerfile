@@ -8,7 +8,9 @@
 FROM ubuntu:12.10
 
 # Update OS.
-RUN echo "deb http://archive.ubuntu.com/ubuntu quantal main universe multiverse" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu quantal multiverse" >> /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu quantal-updates multiverse" >> /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu quantal-security multiverse" >> /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get upgrade -y
 
