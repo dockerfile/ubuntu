@@ -5,14 +5,12 @@
 #
 
 # Pull base image.
-FROM ubuntu:12.10
+FROM ubuntu:14.04
 
 # Update OS.
-RUN echo "deb http://archive.ubuntu.com/ubuntu quantal multiverse" >> /etc/apt/sources.list
-RUN echo "deb http://archive.ubuntu.com/ubuntu quantal-updates multiverse" >> /etc/apt/sources.list
-RUN echo "deb http://archive.ubuntu.com/ubuntu quantal-security multiverse" >> /etc/apt/sources.list
+RUN sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get upgrade -y
+RUN apt-get -y upgrade
 
 # Install basic packages.
 RUN apt-get install -y software-properties-common
