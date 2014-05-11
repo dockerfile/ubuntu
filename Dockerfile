@@ -7,14 +7,14 @@
 # Pull base image.
 FROM ubuntu:14.04
 
-# Update OS.
-RUN sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get -y upgrade
-
-# Install basic packages.
-RUN apt-get install -y build-essential software-properties-common
-RUN apt-get install -y byobu curl git htop unzip vim wget
+# Install.
+RUN \
+  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
+  apt-get update && \
+  apt-get -y upgrade && \
+  apt-get install -y build-essential && \
+  apt-get install -y software-properties-common && \
+  apt-get install -y byobu curl git htop unzip vim wget
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
