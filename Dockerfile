@@ -14,7 +14,7 @@ RUN apt-get -y upgrade
 
 # Install basic packages.
 RUN apt-get install -y build-essential software-properties-common
-RUN apt-get install -y curl git htop unzip vim wget
+RUN apt-get install -y byobu curl git htop unzip vim wget
 
 # Add files.
 ADD root/.bashrc /root/.bashrc
