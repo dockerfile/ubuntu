@@ -20,7 +20,7 @@ RUN \
 # Add files.
 ADD root/.bashrc /root/.bashrc
 ADD root/.gitconfig /root/.gitconfig
-ADD root/scripts /root/scripts
+ADD root/.scripts /root/.scripts
 
 # Set environment variables.
 ENV HOME /root
