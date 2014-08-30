@@ -6,6 +6,11 @@ This repository contains **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) for 
 
 ### Base Docker Image
 
+* [ubuntu:14.04](https://registry.hub.docker.com/u/library/ubuntu/)
+
+
+### Installation
+
 1. Install [Docker](https://www.docker.com/).
 
 2. Download [automated build](https://registry.hub.docker.com/u/dockerfile/ubuntu/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull dockerfile/ubuntu`
