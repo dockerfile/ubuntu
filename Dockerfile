@@ -17,6 +17,12 @@ RUN \
   apt-get install -y byobu curl git htop man unzip vim wget && \
   rm -rf /var/lib/apt/lists/*
 
+# Remove old packages
+RUN \
+  apt-get autoremove \
+  apt-get autoclean \
+  apt-get clean
+
 # Add files.
 ADD root/.bashrc /root/.bashrc
 ADD root/.gitconfig /root/.gitconfig
