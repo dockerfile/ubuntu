@@ -17,7 +17,14 @@ This repository contains **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) for 
 
    (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/ubuntu" github.com/dockerfile/ubuntu`)
 
+### Install Docker from Cammand line in Ubuntu 
+
+sudo apt-get update docker-ce 
+
 
 ### Usage
 
-    docker run -it --rm dockerfile/ubuntu
+docker run -it --rm dockerfile/ubuntu
+
+### check for dead containers in Docker 
+docker ps -a 
