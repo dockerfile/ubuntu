@@ -21,3 +21,4 @@ This repository contains **Dockerfile** of [Ubuntu](http://www.ubuntu.com/) for 
 ### Usage
 
     docker run -it --rm dockerfile/ubuntu
+Sigurohu qe e ki konfiguru SSH Key
