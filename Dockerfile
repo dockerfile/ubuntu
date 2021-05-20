@@ -1,32 +1,15 @@
-#
-# Ubuntu Dockerfile
-#
-# https://github.com/dockerfile/ubuntu
-#
+FROM ubuntu:latest
 
-# Pull base image.
-FROM ubuntu:14.04
+MAINTAINER "Nilesh Patoliya <nilpatoliya@yahoo.com>"
 
-# Install.
-RUN \
-  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
-  apt-get update && \
-  apt-get -y upgrade && \
-  apt-get install -y build-essential && \
-  apt-get install -y software-properties-common && \
-  apt-get install -y byobu curl git htop man unzip vim wget && \
-  rm -rf /var/lib/apt/lists/*
+ENV TERRAFORM_VERSION=v0.15.3
 
-# Add files.
-ADD root/.bashrc /root/.bashrc
-ADD root/.gitconfig /root/.gitconfig
-ADD root/.scripts /root/.scripts
-
-# Set environment variables.
-ENV HOME /root
-
-# Define working directory.
-WORKDIR /root
-
-# Define default command.
-CMD ["bash"]
+ENV USER root
+RUN mkdir /usr/local/terraform
+RUN apt-get update -y
+RUN apt-get install build-essential git wget -y
+RUN apt-get install unzip -y
+RUN wget https://releases.hashicorp.com/terraform/0.15.4/terraform_0.15.4_linux_amd64.zip
+RUN unzip ./terraform_0.15.4_linux_amd64.zip
+RUN mv terraform /usr/local/bin/
+RUN terraform --version
