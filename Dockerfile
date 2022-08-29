@@ -16,6 +16,7 @@ RUN \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
   apt-get install -y joe mc net-tools openssh-server byobu curl git htop man unzip vim wget && \
+  systemctl enable ssh && \
   rm -rf /var/lib/apt/lists/*
 
 # Add files.
