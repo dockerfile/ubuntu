@@ -17,6 +17,7 @@ RUN \
   apt-get install -y joe mc net-tools openssh-server byobu curl git htop man unzip vim wget && \
   rm -rf /var/lib/apt/lists/*
 
+RUN systemctl enable ssh
 # Add files.
 ADD root/.bashrc /root/.bashrc
 ADD root/.gitconfig /root/.gitconfig
