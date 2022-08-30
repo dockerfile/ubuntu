@@ -16,8 +16,6 @@ RUN \
   apt-get install -y software-properties-common && \
   apt-get install -y joe mc net-tools openssh-server byobu curl git htop man unzip vim wget && \
   rm -rf /var/lib/apt/lists/*
-
-RUN service ssh start
 # Add files.
 ADD root/.bashrc /root/.bashrc
 ADD root/.gitconfig /root/.gitconfig
@@ -34,3 +32,6 @@ EXPOSE 22/tcp
 
 # Define default command.
 CMD ["bash"]
+
+# Start ssh 
+CMD ["service ssh start"]
