@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM ubuntu:latest
+FROM ubuntu:22.10
 
 # Install.
 RUN \
