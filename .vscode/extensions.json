@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "amazonwebservices.aws-toolkit-vscode"
+        "amazonwebservices.aws-toolkit-vscode",
+        "ms-python.python"
     ]
 }
